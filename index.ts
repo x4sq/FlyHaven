@@ -37,7 +37,7 @@ if(guild){
         options: [
             {
                 name: 'username',
-                description: 'The person you are reporting (Discord ID and/or Username and Discriminator)',
+                description: 'The person you are reporting (Discord ID and/or Username and Discriminator) || Roblox Username',
                 required: true,
                 type: DiscordJS.Constants.ApplicationCommandOptionTypes.STRING
             },
@@ -160,7 +160,7 @@ appealchannel.send({
         const reportembed = new DiscordJS.MessageEmbed()
         .setColor('#FFB414')
         .setTitle(`❗New User Report from user ${interaction.user.tag}❗`)
-        .setDescription(`${username2}s Report info listed below.`)
+        .setDescription(`${username2} 's Report info listed below.`)
         .addFields(
             { name: 'User reported', value: `${username2}`},
             { name: 'Why they reported this user', value: `${why2}`},
