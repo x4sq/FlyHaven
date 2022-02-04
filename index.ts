@@ -173,7 +173,7 @@ appealchannel.send({
 if(!reportchannel){
     return
 }
-const modteam = interaction.guild?.roles.cache.get('939000662740598864')
+const modteam = interaction.guild?.roles.cache.get('938652639435059260')
 
         reportchannel.send({
             content: `${modteam}`,
