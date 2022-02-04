@@ -37,9 +37,9 @@ if(guild){
         options: [
             {
                 name: 'username',
-                description: 'The person you are reporting',
+                description: 'The person you are reporting (Discord ID and/or Username and Discriminator)',
                 required: true,
-                type: DiscordJS.Constants.ApplicationCommandOptionTypes.USER
+                type: DiscordJS.Constants.ApplicationCommandOptionTypes.STRING
             },
             {
                 name: 'why',
@@ -148,7 +148,7 @@ appealchannel.send({
 
 
     } else if(commandName === 'report'){
-        const username2 = options.getUser('username')
+        const username2 = options.getString('username')
         const why2 = options.getString('why')
         const proof = options.getString('proof')
         interaction.reply({
