@@ -166,6 +166,7 @@ appealchannel.send({
             { name: 'Why they reported this user', value: `${why2}`},
             { name: 'Proof for report', value: `${proof}`}
         )
+        .setImage('https://cdn.discordapp.com/attachments/921841570481836063/938958677040320582/Screen_Shot_2022-02-03_at_8.29.04_AM.png')
         
 
 
