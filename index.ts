@@ -14,12 +14,12 @@ const client = new DiscordJS.Client({
 client.on('ready', () => {
     console.log('FlyHaven Moderation bot has started succesfully.')
 
-const guildId = '938960026326933584'
+const guildId = '938652349814173696'
 
 const guild = client.guilds.cache.get(guildId)
 let commands
-const appealchannel = client.channels.cache.get('938960027983675414') as any
-const reportchannel = client.channels.cache.get('939017615425286224') as any
+const appealchannel = client.channels.cache.get('938942859783061575') as any
+const reportchannel = client.channels.cache.get('938942899796713502') as any
 if(!appealchannel){
     return
 }
@@ -118,10 +118,10 @@ client.on('interactionCreate', async (interaction) => {
             ephemeral: true
         })
 
-const modteam = interaction.guild?.roles.cache.get('939000662740598864')
+const modteam = interaction.guild?.roles.cache.get('938652639435059260')
 
 const appealembed = new DiscordJS.MessageEmbed()
-.setColor('DARK_BLUE')
+.setColor('#FFB414')
 .setTitle(`❗New Ban Appeal from user ${interaction.user.tag}❗`)
 .setDescription(`${username}s ban appeal info listed below.`)
 .addFields(
@@ -158,7 +158,7 @@ appealchannel.send({
 
 
         const reportembed = new DiscordJS.MessageEmbed()
-        .setColor('DARK_BLUE')
+        .setColor('#FFB414')
         .setTitle(`❗New User Report from user ${interaction.user.tag}❗`)
         .setDescription(`${username2}s Report info listed below.`)
         .addFields(
@@ -169,7 +169,7 @@ appealchannel.send({
         
 
 
-        const reportchannel = client.channels.cache.get('939017615425286224') as any
+        const reportchannel = client.channels.cache.get('938942899796713502') as any
 if(!reportchannel){
     return
 }
